@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * Coding exercise 27: Write a method called inputThenPrintSumAndAverage that does not have any parameters.
  * The method should not return anything (void) and it needs to keep reading int numbers from the keyboard.
