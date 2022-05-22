@@ -51,7 +51,7 @@ public class SumCalculator {
     public double getFirstNumber() {
         return this.firstNumber;
     }
-    
+
     public double getSecondNumber() {
         return this.secondNumber;
     }
