@@ -40,11 +40,11 @@ public class WallArea {
     private double width;
     private double height;
 
-    public Wall(){
+    public WallArea(){
 
     }
 
-    public Wall(double width, double height){
+    public WallArea(double width, double height){
         if(width < 0){
             width = 0;
         }
