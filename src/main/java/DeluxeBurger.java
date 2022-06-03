@@ -1,8 +1,7 @@
 /**
  * Coding exercise 40: Description:
- *
- * The purpose of this application is to help a company called Bill's Burgers manage the process of selling their hamburgers. And in order to match Bill's menu, you will need to create three(3) classes, Hamburger, DeluxeBurger, and HealthyBurger.
- *
+ * The purpose of this application is to help a company called Bill's Burgers manage the process of selling their hamburgers.
+ * And in order to match Bill's menu, you will need to create three(3) classes, Hamburger, DeluxeBurger, and HealthyBurger.
  * For the base Hamburger class, there will need to be four variables to represent the four basic ingredients of the hamburger, name, meat, price, and breadRollType. The price variable should be of type double, while the other three are of type String. A constructor will be needed to accept these four values as parameters when creating a new hamburger.
  *
  * There will also need to be separate variables for four(4) possible additions to the hamburger. Those should be declared with these names: addition1Name, addition1Price, addition2Name, addition2Price, addition3Name, addition3Price, addition4Name, and addition4Price. The name variables should be of type String and the price variables should be of type double.
@@ -45,63 +44,26 @@
  * Added Drink for an extra 1.81
  * Total Deluxe Burger price is 19.10
  * */
-public class Hamburger {
-    private String name, meat, breadRollType;
-    private double price;
-    private String addition1Name, addition2Name, addition3Name, addition4Name;
-    private double addition1Price, addition2Price, addition3Price, addition4Price;
-
-    public Hamburger(String name,String meat,double price,String breadRollType){
-        this.name = name;
-        this.meat = meat;
-        this.price = price;
-        this.breadRollType = breadRollType;
+public class DeluxeBurger extends Hamburger{
+    public DeluxeBurger(){
+        super("basic","chicken",10.10,"white");
+        super.addHamburgerAddition1("Chips", 5);
+        super.addHamburgerAddition2("Drink", 4);
     }
 
     public void addHamburgerAddition1(String addition1Name, double addition1Price){
-        this.addition1Name = addition1Name;
-        this.addition1Price = addition1Price;
+        System.out.println("Cannot add additional items to a deluxe burger.");
     }
 
     public void addHamburgerAddition2(String addition2Name, double addition2Price){
-        this.addition2Name = addition2Name;
-        this.addition2Price = addition2Price;
+        System.out.println("Cannot add additional items to a deluxe burger.");
     }
 
     public void addHamburgerAddition3(String addition3Name, double addition3Price){
-        this.addition3Name = addition3Name;
-        this.addition3Price = addition3Price;
+        System.out.println("Cannot add additional items to a deluxe burger.");
     }
 
     public void addHamburgerAddition4(String addition4Name, double addition4Price){
-        this.addition4Name = addition4Name;
-        this.addition4Price = addition4Price;
-    }
-
-    public double itemizeHamburger() {
-        double burgerPrice = this.price;
-        System.out.println(this.name + " hamburger on a " + this.breadRollType + " roll with " + this.meat + ", price is " + this.price);
-
-        if (this.addition1Name != null) {
-            burgerPrice += this.addition1Price;
-            System.out.println("Added " + this.addition1Name + " for an extra " + this.addition1Price);
-        }
-
-        if (this.addition2Name != null) {
-            burgerPrice += this.addition2Price;
-            System.out.println("Added " + this.addition2Name + " for an extra " + this.addition2Price);
-        }
-
-        if (this.addition3Name != null) {
-            burgerPrice += this.addition3Price;
-            System.out.println("Added " + this.addition3Name + " for an extra " + this.addition3Price);
-        }
-
-        if (this.addition4Name != null) {
-            burgerPrice += this.addition4Price;
-            System.out.println("Added " + this.addition4Name + " for an extra " + this.addition4Price);
-        }
-
-        return burgerPrice;
+        System.out.println("Cannot add additional items to a deluxe burger.");
     }
 }
